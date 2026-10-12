@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Policy with OpenLDAP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* System fonts only: this has to work with no network. */
+      body { font-family: "DejaVu Sans", "Helvetica Neue", Arial, sans-serif; }
+      .remark-slide-content {
+        font-size: 26px; padding: 0.8em 2em; color: #1d2330; background: #fbfaf7;
+      }
+      .remark-slide-content h1 { font-size: 1.7em; margin: 0.3em 0 0.5em; color: #1b4d6b; }
+      .remark-slide-content h2 { font-size: 1.2em; color: #1b4d6b; }
+      .remark-code, .remark-inline-code {
+        font-family: "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+      }
+      .remark-code { font-size: 0.66em; line-height: 1.35; }
+      pre .remark-code { background: #eef0f2; border-radius: 0.3em;
+                         padding: 0.5em 0.8em; display: block; }
+      /* Command lines in checks (marked * for remark's line highlight). */
+      .remark-code-line-highlighted { background: none; font-weight: bold;
+                                      color: #1b4d6b; }
+      .remark-inline-code { color: #7a2e0e; }
+      .remark-slide-number { font-size: 0.5em; opacity: 0.6; }
+      a { color: #1b4d6b; }
+
+      /* Slide kinds, set with `class: task` etc. in the Markdown. */
+      .stage { background: #1b4d6b; color: #fbfaf7; }
+      .stage h1, .stage h2 { color: #fbfaf7; }
+      .stage .remark-slide-number { color: #fbfaf7; }
+      .task h1::before { content: "Task: "; color: #b35c00; }
+      .check h1::before { content: "Check: "; color: #2f7a3b; }
+      .solution h1::before { content: "Solution: "; color: #6b4c9a; }
+      .gotcha h1::before { content: "Gotcha: "; color: #a3262b; }
+      .new { background: #b35c00; color: #fff; border-radius: 0.2em;
+             padding: 0 0.3em; font-size: 0.7em; vertical-align: middle; }
+      .small { font-size: 0.8em; }
+      /* For slides with a long listing: `class: solution, dense`. */
+      .dense .remark-code { font-size: 0.52em; }
+      .dense h1 { margin-bottom: 0.3em; }
+    </style>
+  </head>
+  <body>
+    <script src="remark.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        sourceUrl: "workshop.md",
+        ratio: "16:9",
+        highlightStyle: "github",
+        highlightLines: true,
+        countIncrementalSlides: false
+      });
+    </script>
+  </body>
+</html>
